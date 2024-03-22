@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 100px 1fr;
+    height: 1080px;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    background-color: blue;
+    grid-row: 1/-1;
+}
+
+.header {
+    background-color: white;
+}
+
+.maincontent {
+    background-color: grey;
+}
