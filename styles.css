@@ -1,25 +1,140 @@
+@font-face {
+    font-family: "Cabin";
+    src: url(fonts/Cabin-Regular.ttf);
+}
+
+@font-face {
+    font-family: "CabinBold";
+    src: url(fonts/Cabin-Bold.ttf);
+}
+
+
 * {
     box-sizing: border-box;
 }
 
 body {
     display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 100px 1fr;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: 150px 1fr;
     height: 1080px;
     margin: 0;
     padding: 0;
+    font-family: "Cabin",sans-serif;
 }
 
 .sidebar {
-    background-color: blue;
+    background-color: darkslategray;
     grid-row: 1/-1;
+    display: grid;
+    align-content: start;
+    gap: 20px;
 }
 
 .header {
     background-color: white;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 5px 30px;
 }
 
 .maincontent {
     background-color: grey;
+}
+
+.sidebar .top {
+    padding-top: 20px;
+    padding-left: 40px;
+    color: white;
+    font-family: "CabinBold",sans-serif;
+    font-size: 28px;
+}
+
+.sidebar .menu {
+    padding-left: 40px;
+    display: grid;
+    gap: 15px;
+}
+
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu li a {
+    color: white;
+    font-family: "CabinBold", sans-serif;
+    font-size: 22px;
+}
+
+#search {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+}
+
+#searchbar {
+    border-style: hidden;
+    border-width: 2px;
+    background-color: grey;
+    border-radius: 8px;
+    width: min(800px, 100%);
+    font-size: 18px;
+    padding: 4px 8px;
+}
+
+#searchbar:focus {
+    outline: none;
+    border-style: solid;
+    border-color: black;
+}
+
+.profile {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: right;
+}
+
+.greetings {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: 2fr 3fr;
+    align-items: center;
+    justify-content: left;
+}
+
+.greetings .icon {
+    grid-row: 1/-1;
+}
+
+.greetings .hi {
+    font-size: 14px;
+    font-family: "CabinBold", sans-serif;
+    align-self: self-end;
+}
+
+.greetings .username {
+    font-family: "CabinBold", sans-serif;
+    font-size: 24px;
+    align-self:self-start;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 15px;
+    align-items: center;
+    justify-content: right;
 }
