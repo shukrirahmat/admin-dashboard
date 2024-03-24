@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Cabin";
-    src: url(fonts/Cabin-Regular.ttf);
+    font-family: "Raleway";
+    src: url(fonts/Raleway-Regular.ttf);
 }
 
 @font-face {
-    font-family: "CabinBold";
-    src: url(fonts/Cabin-Bold.ttf);
+    font-family: "Raleway-Bold";
+    src: url(fonts/Raleway-Bold.ttf);
 }
 
 
@@ -20,7 +20,7 @@ body {
     height: 1080px;
     margin: 0;
     padding: 0;
-    font-family: "Cabin",sans-serif;
+    font-family: "Raleway",sans-serif;
 }
 
 .sidebar {
@@ -28,7 +28,7 @@ body {
     grid-row: 1/-1;
     display: grid;
     align-content: start;
-    gap: 20px;
+    gap: 30px;
 }
 
 .header {
@@ -45,14 +45,23 @@ body {
 
 .sidebar .top {
     padding-top: 20px;
-    padding-left: 40px;
+    padding-left: 20px;
     color: white;
-    font-family: "CabinBold",sans-serif;
+    font-family: "Raleway-Bold",sans-serif;
     font-size: 28px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    align-items: center;
+
+}
+
+.sidebar .top img {
+    filter: invert(1);
 }
 
 .sidebar .menu {
-    padding-left: 40px;
+    padding-left: 20px;
     display: grid;
     gap: 15px;
 }
@@ -72,8 +81,18 @@ a {
 
 .menu li a {
     color: white;
-    font-family: "CabinBold", sans-serif;
-    font-size: 22px;
+    font-family: "Raleway-Bold", sans-serif;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu li a img {
+    filter: invert(1);
+    width: 55%;
+    justify-self: center;
 }
 
 #search {
@@ -121,12 +140,12 @@ a {
 
 .greetings .hi {
     font-size: 14px;
-    font-family: "CabinBold", sans-serif;
+    font-family: "Raleway-Bold", sans-serif;
     align-self: self-end;
 }
 
 .greetings .username {
-    font-family: "CabinBold", sans-serif;
+    font-family: "Raleway-Bold", sans-serif;
     font-size: 24px;
     align-self:self-start;
 }
