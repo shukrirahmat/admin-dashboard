@@ -98,17 +98,17 @@ a {
 #search {
     align-content: center;
     display: grid;
-    grid-template-columns: 30px 1fr;
-    gap: 10px;
+    grid-template-columns: 36px 1fr;
+    gap: 5px;
 }
 
 #searchbar {
-    border-style: hidden;
+    border-style: solid;
     border-width: 2px;
-    background-color: grey;
-    border-radius: 8px;
+    background-color: slategray;
+    border-radius: 20px;
     width: min(800px, 100%);
-    font-size: 18px;
+    font-size: 16px;
     padding: 4px 8px;
 }
 
@@ -152,8 +152,14 @@ a {
 
 .buttons {
     display: grid;
-    grid-template-columns: 100px 100px 100px;
+    grid-auto-flow: column;
     gap: 15px;
     align-items: center;
     justify-content: right;
+}
+
+form button {
+    border: none;
+    text-decoration: none;
+    background-color: inherit;
 }
