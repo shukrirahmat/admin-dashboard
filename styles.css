@@ -8,6 +8,10 @@
     src: url(fonts/Raleway-Bold.ttf);
 }
 
+:root {
+    --sidebar-color: darkslategray;
+}
+
 
 * {
     box-sizing: border-box;
@@ -17,14 +21,13 @@ body {
     display: grid;
     grid-template-columns: 280px 1fr;
     grid-template-rows: 150px 1fr;
-    height: 1080px;
     margin: 0;
     padding: 0;
     font-family: "Raleway",sans-serif;
 }
 
 .sidebar {
-    background-color: darkslategray;
+    background-color: var(--sidebar-color);
     grid-row: 1/-1;
     display: grid;
     align-content: start;
@@ -37,10 +40,32 @@ body {
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 5px 30px;
+    box-shadow: 10px 0px 5px rgb(0,0,0,0.5);
+    position: relative;
 }
 
 .maincontent {
-    background-color: grey;
+    background-color: lightgray;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    grid-template-rows: 350px 350px 1fr;
+    gap: 20px;
+    font-family: "Raleway-Bold", sans-serif;
+    font-size: 18px;
+}
+
+.project {
+    background-color: brown;
+    grid-row: 1/-1;
+}
+
+.announcement {
+    background-color: blue;
+}
+
+.trending {
+    background-color: burlywood;
 }
 
 .sidebar .top {
@@ -121,10 +146,11 @@ a {
 .profile {
     display: grid;
     grid-template-columns: 36px 40px 1fr;
-    gap: 15px;
+    gap: 20px;
     align-items: center;
     justify-self: right;
-    background-color: aqua;
+    font-size: 14px;
+    font-family: "Raleway-Bold", sans-serif;
 }
 
 .greetings {
@@ -133,7 +159,7 @@ a {
     grid-template-rows: 2fr 3fr;
     align-items: center;
     justify-content: left;
-    background-color: brown;
+    gap: 0 15px;
 }
 
 .greetings .icon {
@@ -154,10 +180,21 @@ a {
 
 .buttons {
     display: grid;
-    grid-auto-flow: column;
-    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
     align-items: center;
-    justify-content: right;
+    justify-self: right;
+}
+
+.buttons button {
+    width: 80px;
+    border: none;
+    text-decoration: none;
+    background-color: var(--sidebar-color);
+    color: white;
+    padding: 10px 10px;
+    font-family: "Raleway-Bold", sans-serif;
+    border-radius: 20px;
 }
 
 .transparent {
@@ -171,10 +208,21 @@ a {
     background-color: black;
 }
 
+.profile .icon, .greetings .icon {
+    background-image: url(images/avatar/bear-8001665_640.png);
+    background-size: cover;
+}
+
 .profile .icon {
     height: 40px;
 }
 
 .greetings .icon {
     height: 60px;
+}
+
+button:hover {
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
 }
