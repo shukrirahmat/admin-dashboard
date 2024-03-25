@@ -34,7 +34,7 @@ body {
 .header {
     background-color: white;
     display: grid;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 5px 30px;
 }
@@ -120,18 +120,20 @@ a {
 
 .profile {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 36px 40px 1fr;
     gap: 15px;
     align-items: center;
-    justify-content: right;
+    justify-self: right;
+    background-color: aqua;
 }
 
 .greetings {
     display: grid;
-    grid-template-columns: 80px 1fr;
+    grid-template-columns: 60px 1fr;
     grid-template-rows: 2fr 3fr;
     align-items: center;
     justify-content: left;
+    background-color: brown;
 }
 
 .greetings .icon {
@@ -158,8 +160,21 @@ a {
     justify-content: right;
 }
 
-form button {
+.transparent {
     border: none;
     text-decoration: none;
     background-color: inherit;
+}
+
+.icon {
+    border-radius: 50%;
+    background-color: black;
+}
+
+.profile .icon {
+    height: 40px;
+}
+
+.greetings .icon {
+    height: 60px;
 }
