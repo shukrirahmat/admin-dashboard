@@ -105,6 +105,35 @@ h3.title {
     height: 90%;
     box-shadow: 5px 5px 5px rgb(0,0,0,0.2);
     position: relative;
+    padding: 20px;
+}
+
+.rightpaneltop .rightcontainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.rightpanelbottom .rightcontainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.announcement {
+    padding: 10px 0;
+}
+
+.announcement.btmline {
+    border-bottom: 0.5px solid rgb(0,0,0,0.2);
+}
+
+.announcement h3 {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.announcement .text {
+    font-size: 12px;
 }
 
 .sidebar .top {
@@ -245,11 +274,11 @@ a {
 .icon {
     border-radius: 50%;
     background-color: black;
+    background-size: cover;
 }
 
 .profile .icon, .greetings .icon {
     background-image: url(images/avatar/bear-8001665_640.png);
-    background-size: cover;
 }
 
 .profile .icon {
@@ -264,4 +293,30 @@ button:hover {
     border-style: solid;
     border-color: white;
     border-width: 2px;
+}
+
+.otheruser {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px 15px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.otheruser .icon {
+    height: 40px;
+    grid-row: 1/-1;
+}
+
+.at {
+    font-size: 12px;
+    font-family: "Raleway-Bold", sans-serif;
+    align-self: self-end;
+}
+
+.otheruser .username {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    align-self:self-start;
 }
