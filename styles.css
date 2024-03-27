@@ -205,17 +205,19 @@ a {
 #searchbar {
     border-style: solid;
     border-width: 2px;
-    background-color: slategray;
+    background-color: var(--sidebar-color);
     border-radius: 20px;
     width: min(800px, 100%);
     font-size: 16px;
     padding: 4px 8px;
+    color: white;
+    font-family: "Raleway-Bold", sans-serif;
 }
 
 #searchbar:focus {
     outline: none;
     border-style: solid;
-    border-color: black;
+    border-color: slategray;
 }
 
 .profile {
